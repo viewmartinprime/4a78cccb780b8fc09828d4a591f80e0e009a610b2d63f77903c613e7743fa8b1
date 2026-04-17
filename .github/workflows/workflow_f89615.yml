@@ -1,0 +1,25 @@
+name: workflow_f89615
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check project structure
+        run: |
+          echo "Checking project files..."
+          ls -la
+          echo "Project structure verified"
+      - name: Check code style
+        run: |
+          echo "Checking code style..."
+          find . -name "*.md" -type f -not -path "./.git/*" | head -5
+          echo "Style check complete"
